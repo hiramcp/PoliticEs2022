@@ -5,5 +5,5 @@ This manuscript describes the low-dimensional stacking model approach used to pr
 ### Authors: Hiram Cabrera, Eric Tellez and Sabino Miranda
 
 ## Source Code
-There are two different source code files for every kind of classifier, task_solver.py contains the Gradient Boosting approach and, task_solver_svm.py includes both SVM Linear and SVM RBF approaches.
+There are two different source code files for every kind of classifier, *task_solver.py* contains the Gradient Boosting approach and, *task_solver_svm.py* includes both SVM Linear and SVM RBF approaches.
 
