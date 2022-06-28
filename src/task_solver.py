@@ -1,6 +1,5 @@
 import os, csv, fasttext, math, nltk, time, pandas as pd, numpy as np
 
-
 from os import path
 from sklearn import preprocessing
 from sklearn.preprocessing import StandardScaler
