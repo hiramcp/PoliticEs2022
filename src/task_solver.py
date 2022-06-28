@@ -60,7 +60,7 @@ X_train, Y_train, le_train_gender = build_data(aTrainGen, dfTrain, "gender",True
 if bNormalize:
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
-    X_dev = scaler.fit_transform(X_dev)
+    
     
 #Training
 from sklearn.model_selection import RepeatedStratifiedKFold
@@ -93,7 +93,7 @@ X_train, Y_train, le_train_prof = build_data(aTrainProf, dfTrain, "profession",T
 if bNormalize:
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
-    X_dev = scaler.fit_transform(X_dev)
+    
     
 #Training
 from sklearn.model_selection import RepeatedStratifiedKFold
@@ -124,7 +124,6 @@ X_train, Y_train, le_train_ideob = build_data(aTrainIdeoB, dfTrain, "ideology_bi
 if bNormalize:
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
-    X_dev = scaler.fit_transform(X_dev)
     
 #Training
 from sklearn.model_selection import RepeatedStratifiedKFold
@@ -156,7 +155,7 @@ X_train, Y_train, le_train_ideom = build_data(aTrainIdeoM, dfTrain, "ideology_mu
 if bNormalize:
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
-    X_dev = scaler.fit_transform(X_dev)
+    
     
 #Training
 from sklearn.model_selection import RepeatedStratifiedKFold
