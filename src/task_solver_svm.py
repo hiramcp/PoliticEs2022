@@ -1,13 +1,4 @@
-#from juliacall import Main as jl
-#jl.seval("using NPZ")
-
-#emb_train = jl.NPZ.npzread("C:\\HCP\\Personal\\Doctorado\\3er Semestre\\iberLef 22\\Datos\\emb_train.npy")
-#emb_dev = jl.NPZ.npzread("C:\\HCP\\Personal\\Doctorado\\3er Semestre\\iberLef 22\\Datos\\emb_dev.npy")
-
-
-from msilib.schema import Class
 import os, csv, fasttext, math, nltk, time, pandas as pd, numpy as np
-
 
 from os import path
 from sklearn import preprocessing
@@ -32,29 +23,17 @@ def build_data(aInput, dfClass, ClassName, bEncondeY):
     return X, Y, le
 
 #Main
-started = time.time()
-print("Inicio Tiempo seg: " , time.strftime("%H:%M:%S", time.localtime()))
 
 #Preparing data files
 #Emb [gender, profession, ideology_binary, ideology_multiclass]
-fiNaTrain = "../../Datos/emb_train.npy"
-fiNaDev = "../../Datos/emb_dev.npy"
-
-fiNaKlassTrain = "../../Datos/df_class_train.csv"
-fiNaKlassDev = "../../Datos/df_class_dev.csv"
-
+fiNaTrain = "../data/emb_train.npy"
+fiNaKlassTrain = "../data/df_class_train.csv"
 fiTrain = path.abspath(path.join(dir,fiNaTrain))
-fiDev = path.abspath(path.join(dir,fiNaDev))
-
 fiKlassTrain= path.abspath(path.join(dir,fiNaKlassTrain))
-fiKlassDev= path.abspath(path.join(dir,fiNaKlassDev))
 
 #Load data
 aTrain = np.load(fiTrain)
-aDev = np.load(fiDev)
-
 dfTrain = pd.read_csv(fiKlassTrain)
-dfDev = pd.read_csv(fiKlassDev)
 
 # aTrainGen = aTrain
 # aTrainProf = aTrain
