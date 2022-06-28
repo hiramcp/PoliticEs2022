@@ -27,23 +27,13 @@ def build_data(aInput, dfClass, ClassName, bEncondeY):
 #Preparing data files
 #Emb [gender, profession, ideology_binary, ideology_multiclass]
 fiNaTrain = "../data/emb_train.npy"
-fiNaDev = "../data/emb_dev.npy"
-
 fiNaKlassTrain = "../data/df_class_train.csv"
-fiNaKlassDev = "../data/df_class_dev.csv"
-
 fiTrain = path.abspath(path.join(dir,fiNaTrain))
-fiDev = path.abspath(path.join(dir,fiNaDev))
-
 fiKlassTrain= path.abspath(path.join(dir,fiNaKlassTrain))
-fiKlassDev= path.abspath(path.join(dir,fiNaKlassDev))
 
 #Load data
 aTrain = np.load(fiTrain)
-aDev = np.load(fiDev)
-
 dfTrain = pd.read_csv(fiKlassTrain)
-dfDev = pd.read_csv(fiKlassDev)
 
 # 12-dim stacked vector
 # Uncomment following block to use a 12-dim representation
