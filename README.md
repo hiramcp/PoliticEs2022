@@ -5,11 +5,11 @@ This manuscript describes the low-dimensional stacking model approach used to pr
 ### Authors: Hiram Cabrera, Eric Tellez and Sabino Miranda
 
 ## Source Code
-**- UMAP Model**
+**UMAP Model**
 
 Julia Notebook produces a 12-dimensional embedding for each user.
 
-**- Prediction Stage**
+**Prediction Stage**
 
 There are two different Python source code files for every kind of classifier, *task_solver.py* contains the Gradient Boosting approach and, *task_solver_svm.py* includes both SVM Linear and SVM RBF approaches.
 
