@@ -1,15 +1,19 @@
 # PoliticES task at IberLEF@SEPLN 2022
 ## Paper: Low-dimensional Stacking Model for Political Ideology Profiling
-This manuscript describes the low-dimensional stacking model approach used to profile users to solve gender and profession identification and binary and multiclass ideology prediction tasks. We developed these models in the scope of the PoliticEs: Spanish Author Profiling for Political Ideology carried out at IberLEF@SEPLN 2022. Our methodology stacks several low-dimensional representations that can be used to visualize the dataset and as the input dataset for a classifier. While the results were late in the challenge, our final evaluations achieved high performances in the training and test partitions, and we believe that they are promising approaches in the road to create both transparent and competitive user profiling models.
+This repository contains our code and models for solving the _PoliticEs: Spanish Author Profiling for Political Ideology_ carried out at _IberLEF@SEPLN 2022_.
 
-### Authors: Hiram Cabrera, Eric Tellez and Sabino Miranda
+>INFOTEC-LaBD at PoliticES 2022: Low-dimensional Stacking Model for Political Ideology Profiling. Hiram Cabrera, Eric S. Tellez and Sabino Miranda. IberLEF@SEPL 2022 (URL).
 
-## Source Code
-  * **UMAP Model**
+Our methodology stacks several low-dimensional representations that can be used to visualize the dataset and as the input dataset for a classifier. This repository shows how to apply our approach to user profiling. Using a bunch of Twitter users' messages, we created these models and predicted gender, profession, and binary and multiclass ideology tasks.
 
-Julia Notebook produces a 12-dimensional embedding for each user.
 
-  * **Prediction Stage**
+## About the implementation
+There are two different source code files, one for each kind of classifier:
 
-There are two different Python source code files for every kind of classifier, *task_solver.py* contains the Gradient Boosting approach and, *task_solver_svm.py* includes both SVM Linear and SVM RBF approaches.
+- `src/task_solver.py` contains the Gradient Boosting implementation.
+- `src/task_solver_svm.py` includes both SVM Linear and SVM RBF approaches.
 
+The text is preprocessed and vectorized using the [`TextSearch.jl`](https://github.com/sadit/TextSearch.jl) and the low-dimensional projection is performed with [`SimSearchManifoldLearning.jl`](https://github.com/sadit/SimSearchManifoldLearning.jl). The notebook `src/Iberlef2022-F.ipynb` exemplifies the preprocessing-projection pipeline.
+
+## About the data
+This repository provides only embedding vectors and labels; the original data can be retrieved from the PoliticES task at [codalab](https://codalab.lisn.upsaclay.fr/competitions/1948).
