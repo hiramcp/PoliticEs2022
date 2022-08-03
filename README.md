@@ -17,3 +17,7 @@ The text is preprocessed and vectorized using the [`TextSearch.jl`](https://gith
 
 ## About the data
 This repository provides only embedding vectors and labels; the original data can be retrieved from the PoliticES task at [codalab](https://codalab.lisn.upsaclay.fr/competitions/1948).
+
+## Disclaimer
+This implementation is a work-in-progress. If you encounter any issues, please create an issue or make a pull request.
+
